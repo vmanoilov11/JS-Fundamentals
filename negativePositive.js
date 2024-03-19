@@ -1,13 +1,20 @@
-function solve(input) {
-  let result = [];
+function solve(array){
 
-  for(let i = 0; i < input.length; i++) {
-      if(input[i] < 0){
-          result.unshift(input[i]);
-      }else{
-          result.push(input[i]);
-      }
-  }
-  console.log(result.join("\n"));
+    let result = []
+
+    for(let element of array){
+
+        element = Number(element)
+
+        if(element < 0){
+            result.unshift(element)
+        }else{
+            result.push(element)
+        }
+    }
+    for(let element of result){
+        console.log(element)
+    }
+
 }
-solve([7, -2, 8, 9]);
+solve(['7', '-2', '8', '9'])
