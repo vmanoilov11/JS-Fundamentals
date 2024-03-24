@@ -1,24 +1,21 @@
 function solve(day) {
-
-  if (day < 1 || day > 7){
-    console.log("Invalid day!")
     
-  }else{
-    let days =
-    ["Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday"];
-
-    let index = day- 1;
-
-    console.log(days[index])
-  }
-  
+    if(day === "Monday"){
+        console.log(1)
+    }else if(day === "Tuesday"){
+        console.log(2)
+    }else if(day === "Wednesday"){
+        console.log(3)
+    }else if(day === "Thursday"){
+        console.log(4)
+    }else if(day === "Friday"){
+        console.log(5)
+    }else if(day === "Saturday"){
+        console.log(6)
+    }else if(day === "Sunday"){
+        console.log(7)
+    }else{
+        console.log("error")
+    }
 }
-solve(3)
-solve(5)
-solve(-1)
+solve("Mon32day");
