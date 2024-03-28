@@ -1,7 +1,4 @@
-function solve(arr) {
-
-    let spliced = arr.splice(2, 3)
-
-    console.log(arr)
+function sum(arr) {
+  return arr.reduce((a,b) => a + b, 0);
 }
-solve([5, 3 , 2, 8, 1 ]);
+sum(6, 3);
