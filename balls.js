@@ -1,55 +1,45 @@
-function solve(input){
+function balls(input) {
+  AmountOfBalls = Number(input[0]);
 
-    let index = 0
-    let numBalls = Number(input[index])
-    index++
+  let pointCounter = 0;
+  let ballCounter = 0;
 
-    let points = 0
-    let ballCounter = 0
-    let redCounter = 0
-    let orangeCounter = 0
-    let yellowCounter = 0
-    let whiteCounter = 0
-    let blackCounter = 0 
+  let redBall = 0;
+  let orangeBall = 0;
+  let yellowBall = 0;
+  let whiteBall = 0;
+  let blackBall = 0;
 
+  for (let ball = 1; ball <= AmountOfBalls; ball++) {
 
-    for(let balls = 1; balls <= numBalls; balls++ ){
-        let color = input[index++]
+    console.log(ball)
 
-        if(color=== "red"){
-            points += 5
-            redCounter++
-        }else if(color === "orange"){
-            points += 10
-            orangeCounter++
-        }else if(color === "yellow"){
-            points+= 15
-            yellowCounter++
-
-        }else if(color === "white"){
-            points+=20
-            whiteCounter++
-
-        }else if(color === "black"){
-            points = points / 2
-            blackCounter++
-
-        }else{
-            ballCounter++
-        }
-
+    let currentBall = input[ball];
+    if (currentBall === "red") {
+      pointCounter += 5;
+      redBall += 1;
+    } else if (currentBall === "orange") {
+      pointCounter += 10;
+      orangeBall += 1;
+    } else if (currentBall === "yellow") {
+      pointCounter += 15;
+      yellowBall += 1;
+    } else if (currentBall === "white") {
+      pointCounter += 20;
+      whiteBall += 1;
+    } else if (currentBall === "black") {
+      pointCounter = Math.floor(pointCounter / 2);
+      blackBall += 1;
+    } else {
+      ballCounter += 1;
     }
-
-    console.log(`Total points: ${Math.floor(points)}`)
-    console.log(`Red balls: ${redCounter}`)
-    console.log(`Orange balls: ${orangeCounter}`)
-    console.log(`Yellow balls: ${yellowCounter}`)
-    console.log(`White balls: ${whiteCounter}`)
-    console.log(`Other colors picked: ${ballCounter}`)
-    console.log(`Divides from black balls: ${blackCounter}`)
-
+  }
+  console.log(`Total points: ${pointCounter}`);
+  console.log(`Points from red balls: ${redBall}`);
+  console.log(`Points from orange balls: ${orangeBall}`);
+  console.log(`Points from yellow balls: ${yellowBall}`);
+  console.log(`Points from white balls: ${whiteBall}`);
+  console.log(`Other colors picked: ${ballCounter}`);
+  console.log(`Divides from black balls: ${blackBall}`);
 }
-solve(["3",
-"white",
-"black",
-"pink"])
+balls(["5", "red", "red", "ddd", "ddd", "ddd"]);
