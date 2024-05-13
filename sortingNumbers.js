@@ -1,10 +1,10 @@
 function solve(input) {
     let result = []
-    input.sort((a, b) => b - a)
+    input.sort((a, b) => b - a);
 
     while(input.length !== 0){
-        result.push(input.pop())
-        result.push(input.shift())
+        result.push(input.pop());
+        result.push(input.shift());
     }
     return result
 }
