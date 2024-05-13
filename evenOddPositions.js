@@ -5,26 +5,26 @@ function numbers(input){
     let result = ""
 
     for(let i = startNum; i <= endNum; i++){
-        let evenSum = 0
-        let oddSum = 0
+        let evenSum = 0;
+        let oddSum = 0;
 
         let numToString = i + "";
 
         for(let index = 0; index < numToString.length ; index++){
             if(index % 2 === 0){
-                evenSum += Number(numToString [index])
+                evenSum += Number(numToString [index]);
             }else{
-                oddSum += Number(numToString[index])
+                oddSum += Number(numToString[index]);
             }
         
 
         }if(evenSum === oddSum){
-            result += numToString + " "
+            result += numToString + " ";
         }
 
 
     }
-    console.log(result)
+    console.log(result);
 
 }
 numbers(["100000",
