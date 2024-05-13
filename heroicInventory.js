@@ -7,7 +7,7 @@ function solve(input) {
     if (items === undefined) {
       items = [];
     } else {
-      items = items.split(", ");
+      items = items.split(", ")
     }
 
     result.push({ name, level, items });
